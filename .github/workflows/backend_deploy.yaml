@@ -1,6 +1,6 @@
 name: Deploy Backend
 
-于:
+on:
   workflow_run:
     workflows: [Upstream Sync]
     types: [completed]
