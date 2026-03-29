@@ -1,11 +1,11 @@
 name: Deploy Backend
 
-on:
+于:
   workflow_run:
     workflows: [Upstream Sync]
     types: [completed]
   push:
-    tags:
+    标签:
       - "*"
   workflow_dispatch:
 
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 22
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         id: pnpm-install
         with:
