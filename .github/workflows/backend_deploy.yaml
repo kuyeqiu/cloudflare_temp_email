@@ -1,9 +1,11 @@
 name: Deploy Backend
+
+于:
   workflow_run:
     workflows: [Upstream Sync]
     types: [completed]
   push:
-    标签:
+    tags:
       - "*"
   workflow_dispatch:
 
